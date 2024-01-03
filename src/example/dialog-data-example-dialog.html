@@ -1,23 +1,123 @@
-<h1 mat-dialog-title>Favorite Animal</h1>
-<div mat-dialog-content>
-  My favorite animal is:
-  <ul>
-    <li>
-      @if (data.animal === 'panda') {
-        <span>&#10003;</span>
-      } Panda
-    </li>
-    <li>
-      @if (data.animal === 'unicorn') {
-        <span>&#10003;</span>
-      } Unicorn
-    </li>
-    <li>
-      @if (data.animal === 'lion') {
-        <span>&#10003;</span>
-      } Lion
-    </li>
-  </ul>
+<h1 mat-dialog-title>Firm Details</h1>
+<div  mat-dialog-content>
+  <div class="row">
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="Firm ">
+    </mat-form-field>
+  </div>
+ 
+  <div class="form-wrapper">
+    <h2>Setup</h2>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <h3>Firm Info</h3>
+          <div class="row">
+            <mat-form-field appearance="outline">
+              <input matInput placeholder="Code">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <input matInput placeholder="Id">
+            </mat-form-field>
+          </div>
+  
+          <mat-form-field appearance="outline">
+            <input matInput placeholder="Name">
+          </mat-form-field>
+          <div class="row">
+            <mat-form-field appearance="outline">
+              <input matInput placeholder="Website">
+            </mat-form-field>
+            <mat-checkbox>Inactive</mat-checkbox>
+          </div>
+  
+          <mat-form-field appearance="outline">
+            <input matInput placeholder="Offset Method">
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <h3>Remarks</h3>
+          <mat-form-field appearance="outline">
+            <textarea matInput placeholder="Remarks"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <h3>Contact Info</h3>
+          <mat-form-field appearance="outline">
+            <input matInput placeholder="Contact Person">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <input matInput placeholder="Address">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <input matInput placeholder="City">
+          </mat-form-field>
+          <div class="row">
+            <mat-form-field appearance="outline">
+              <input matInput placeholder="State">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <input matInput placeholder="Zip code">
+            </mat-form-field>
+          </div>
+  
+          <mat-form-field appearance="outline">
+            <input matInput placeholder="Email">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <input matInput placeholder="Phone">
+          </mat-form-field>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  </div>
+
+  <div class="form-wrapper">
+    <h2>Config</h2>
+    <div class="col">
+      <div class="form-group">
+        <h3>Fees/Comm.Template</h3>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Fees/Comm.Template">
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <h3>Tax invoice</h3>
+        <mat-checkbox> Generate Tax Invoice for all taxable account on this firm</mat-checkbox>
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <input matInput placeholder="Tax Identification No / Registration No">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <input matInput placeholder="Settlement No">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <h3>Statements Logo</h3>
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-select  placeholder="Logo">
+              <mat-option value="1">Bank Name</mat-option>
+              <mat-option value="2">Bank Name</mat-option>
+              <mat-option value="3">Bank Name</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <img src="https://sim1.quicksuitetrading.com/wlc/logo_POther.png"/>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+
 </div>
 
 

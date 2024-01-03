@@ -1,0 +1,38 @@
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    gap: 16px;
+    flex-grow: 1;
+
+    
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 16px;
+    flex-grow: 1;
+    align-items: start;
+
+    
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-grow: 1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+}
