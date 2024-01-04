@@ -4,13 +4,15 @@ import {
   MAT_DIALOG_DATA,
   MatDialogTitle,
   MatDialogContent,
+  MatDialogClose,
+  MatDialogActions,
 } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
-
+import {MatIconModule} from '@angular/material/icon';
 export interface DialogData {
   animal: 'panda' | 'unicorn' | 'lion';
 }
@@ -41,7 +43,7 @@ export class DialogDataExample {
   templateUrl: 'dialog-data-example-dialog.html',
   styleUrls: ['./dialog-data-example-dialog.scss'],
   standalone: true,
-  imports: [MatDialogTitle, MatDialogContent, MatFormFieldModule, MatInputModule, MatButtonModule, MatCheckboxModule, MatSelectModule],
+  imports: [MatDialogTitle, MatDialogActions, MatDialogContent, MatFormFieldModule, MatInputModule, MatButtonModule, MatCheckboxModule, MatSelectModule, MatIconModule, MatDialogClose],
 })
 export class DialogDataExampleDialog {
   constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
