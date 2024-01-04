@@ -34,9 +34,10 @@
 
     .dialog-title {
         width: 100%;
+        display: flex;
         align-items: center;
         justify-content: start;
-        gap: 16px;
+        gap: 32px;
     }
 }
 
