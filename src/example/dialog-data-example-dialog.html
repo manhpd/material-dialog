@@ -1,13 +1,16 @@
-<h1 mat-dialog-title>Firm Details</h1>
-<div  mat-dialog-content>
-  <div class="row">
-    <mat-form-field appearance="outline">
-      <input matInput placeholder="Firm ">
-    </mat-form-field>
+<div class="dialog-header" mat-dialog-title>
+  <div class="dialog-title">
+    <mat-icon>account_balance</mat-icon>
+    <span>Firm Details</span>
   </div>
- 
+  <div class="dialog-actions">
+    <button mat-icon-button mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+    </div>
+</div>
+<div class="dialog-content" mat-dialog-content>
   <div class="form-wrapper">
-    <h2>Setup</h2>
     <div class="row">
       <div class="col">
         <div class="form-group">
@@ -78,7 +81,6 @@
   </div>
 
   <div class="form-wrapper">
-    <h2>Config</h2>
     <div class="col">
       <div class="form-group">
         <h3>Fees/Comm.Template</h3>
@@ -116,10 +118,11 @@
     </div>
 
   </div>
-  
-
 </div>
-
+<div mat-dialog-actions>
+  <button mat-button >Cancel</button>
+  <button mat-button  cdkFocusInitial>Ok</button>
+</div>
 
 <!-- Copyright 2024 Google LLC. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
