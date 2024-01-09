@@ -3,12 +3,13 @@
     <mat-icon>account_balance</mat-icon>
     <span>Firm Details</span>
   </div>
-  <div class="dialog-actions">
+  <div class="dialog-header-actions">
     <button mat-icon-button mat-dialog-close>
       <mat-icon>close</mat-icon>
     </button>
-    </div>
+  </div>
 </div>
+
 <div class="dialog-content" mat-dialog-content>
   <div class="form-wrapper">
     <div class="row">
@@ -23,7 +24,7 @@
               <input matInput placeholder="Id">
             </mat-form-field>
           </div>
-  
+
           <mat-form-field appearance="outline">
             <input matInput placeholder="Name">
           </mat-form-field>
@@ -33,7 +34,7 @@
             </mat-form-field>
             <mat-checkbox>Inactive</mat-checkbox>
           </div>
-  
+
           <mat-form-field appearance="outline">
             <input matInput placeholder="Offset Method">
           </mat-form-field>
@@ -65,18 +66,18 @@
               <input matInput placeholder="Zip code">
             </mat-form-field>
           </div>
-  
+
           <mat-form-field appearance="outline">
             <input matInput placeholder="Email">
           </mat-form-field>
           <mat-form-field appearance="outline">
             <input matInput placeholder="Phone">
           </mat-form-field>
-  
+
         </div>
-  
+
       </div>
-  
+
     </div>
   </div>
 
@@ -106,22 +107,22 @@
         <h3>Statements Logo</h3>
         <div class="row">
           <mat-form-field appearance="outline">
-            <mat-select  placeholder="Logo">
+            <mat-select placeholder="Logo">
               <mat-option value="1">Bank Name</mat-option>
               <mat-option value="2">Bank Name</mat-option>
               <mat-option value="3">Bank Name</mat-option>
             </mat-select>
           </mat-form-field>
-          <img src="https://sim1.quicksuitetrading.com/wlc/logo_POther.png"/>
+          <img src="https://sim1.quicksuitetrading.com/wlc/logo_POther.png" />
         </div>
       </div>
     </div>
 
   </div>
 </div>
-<div mat-dialog-actions>
-  <button mat-button >Cancel</button>
-  <button mat-button  cdkFocusInitial>Ok</button>
+<div class="dialog-actions" mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
 </div>
 
 <!-- Copyright 2024 Google LLC. All Rights Reserved.

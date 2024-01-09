@@ -1,8 +1,54 @@
+::ng-deep {
+    .mat-mdc-dialog-surface {
+        resize: both;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+:host{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: inherit;
+}
 .form-wrapper {
     display: flex;
     flex-direction: column;
     gap: 16px;
     flex-grow: 1;
+    padding-top: 16px;
+}
+
+.dialog-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-grow: 1;
+    padding:8px;
+    background-color: cornflowerblue;
+    color: white;
+    max-height: 50px !important;
+
+    .dialog-title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 32px;
+    }
+}
+
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-grow: 1;
+    padding: 16px;
+    height: 60vh;
+    max-height: none !important;
 }
 
 .row {
@@ -31,26 +77,6 @@
     padding: 16px;
 }
 
-
-
-.dialog-header {
-    background-color: cornflowerblue;
-    display: flex ;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px;
-    color: white;
-    .dialog-title {
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        justify-content: start;
-        gap: 8px;
-        flex-grow: 1;
-    }
-}
-
-.dialog-content {
-    padding-top: 16px;
+.dialog-actions {
+    max-height: 50px !important;
 }
