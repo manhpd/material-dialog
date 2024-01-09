@@ -80,3 +80,15 @@
 .dialog-actions {
     max-height: 50px !important;
 }
+
+.dialog-header-actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    flex-grow: 1;
+    padding:8px;
+    color: white;
+    max-height: 50px !important;
+}
