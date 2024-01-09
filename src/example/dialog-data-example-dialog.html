@@ -4,6 +4,7 @@
     <span>Firm Details</span>
   </div>
   <div class="dialog-header-actions">
+    <mat-slide-toggle [checked]="checked" (change)="onToggleChange($event)">Advance/Basic</mat-slide-toggle>
     <button mat-icon-button mat-dialog-close>
       <mat-icon>close</mat-icon>
     </button>
@@ -18,30 +19,36 @@
           <h3>Firm Info</h3>
           <div class="row">
             <mat-form-field appearance="outline">
-              <input matInput placeholder="Code">
+              <mat-label>Code</mat-label>
+              <input matInput placeholder="Code" required>
             </mat-form-field>
             <mat-form-field appearance="outline">
-              <input matInput placeholder="Id">
+              <mat-label>Id</mat-label>
+              <input matInput placeholder="Id" required>
             </mat-form-field>
           </div>
 
           <mat-form-field appearance="outline">
-            <input matInput placeholder="Name">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Name" required>
           </mat-form-field>
           <div class="row">
             <mat-form-field appearance="outline">
-              <input matInput placeholder="Website">
+              <mat-label>Website</mat-label>
+              <input matInput placeholder="Website" required>
             </mat-form-field>
             <mat-checkbox>Inactive</mat-checkbox>
           </div>
 
           <mat-form-field appearance="outline">
-            <input matInput placeholder="Offset Method">
+            <mat-label>Offset Method</mat-label>
+            <input matInput placeholder="Offset Method" required>
           </mat-form-field>
         </div>
-        <div class="form-group">
+        <div class="form-group" *ngIf="checked">
           <h3>Remarks</h3>
           <mat-form-field appearance="outline">
+            <mat-label>Remarks</mat-label>
             <textarea matInput placeholder="Remarks"></textarea>
           </mat-form-field>
         </div>
@@ -50,43 +57,48 @@
         <div class="form-group">
           <h3>Contact Info</h3>
           <mat-form-field appearance="outline">
-            <input matInput placeholder="Contact Person">
+            <mat-label>Contact Person</mat-label>
+            <input matInput placeholder="Contact Person" >
           </mat-form-field>
           <mat-form-field appearance="outline">
-            <input matInput placeholder="Address">
+            <mat-label>Address</mat-label>
+            <input matInput placeholder="Address" required>
           </mat-form-field>
           <mat-form-field appearance="outline">
-            <input matInput placeholder="City">
+            <mat-label>City</mat-label>
+            <input matInput placeholder="City" required>
           </mat-form-field>
           <div class="row">
             <mat-form-field appearance="outline">
-              <input matInput placeholder="State">
+              <mat-label>State</mat-label>
+              <input matInput placeholder="State" required>
             </mat-form-field>
             <mat-form-field appearance="outline">
-              <input matInput placeholder="Zip code">
+              <mat-label>Zip code</mat-label>
+              <input matInput placeholder="Zip code" required>
             </mat-form-field>
           </div>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" *ngIf="checked">
+            <mat-label>Email</mat-label>
             <input matInput placeholder="Email">
           </mat-form-field>
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" *ngIf="checked">
+            <mat-label>Phone</mat-label>
             <input matInput placeholder="Phone">
           </mat-form-field>
-
         </div>
-
       </div>
-
     </div>
   </div>
 
   <div class="form-wrapper">
     <div class="col">
-      <div class="form-group">
+      <div class="form-group" >
         <h3>Fees/Comm.Template</h3>
         <mat-form-field appearance="outline">
-          <input matInput placeholder="Fees/Comm.Template">
+          <mat-label>Fees/Comm.Template</mat-label>
+          <input matInput placeholder="Fees/Comm.Template" required>
         </mat-form-field>
       </div>
 
@@ -95,18 +107,21 @@
         <mat-checkbox> Generate Tax Invoice for all taxable account on this firm</mat-checkbox>
         <div class="row">
           <mat-form-field appearance="outline">
-            <input matInput placeholder="Tax Identification No / Registration No">
+            <mat-label>Tax Identification No / Registration No</mat-label>
+            <input matInput placeholder="Tax Identification No / Registration No" required>
           </mat-form-field>
           <mat-form-field appearance="outline">
-            <input matInput placeholder="Settlement No">
+            <mat-label>Settlement No</mat-label>
+            <input matInput placeholder="Settlement No" required>
           </mat-form-field>
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" *ngIf="checked">
         <h3>Statements Logo</h3>
         <div class="row">
           <mat-form-field appearance="outline">
+            <mat-label>Statements Logo</mat-label>
             <mat-select placeholder="Logo">
               <mat-option value="1">Bank Name</mat-option>
               <mat-option value="2">Bank Name</mat-option>
